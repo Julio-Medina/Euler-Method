@@ -73,6 +73,31 @@ El método de Euler aproxima $w\approx y(t_i)$, para cada $i=1,2,\hdots, N$ al o
  w_{i+1}&^=w_i+h f(t_i, w_i), \,\,\,\, \text{para cada } i=0,1,\hdots, N-1 
 \end{split}
 \end{equation} 
+El método de Euler se ha implementado en un python para poder analizar el comportamiento del error, \url{https://github.com/Julio-Medina/Euler-Method/tree/main/python}.
+\subsection{Comportamiento del error en el Método de Euler}
+Para describir el comportamiento del error en el método de Euler se resuelve el problema de valor inicial
+\begin{equation*}
+y'=y-t^2+1,\,\,\,\, 0\geq t\geq 2, \,\,\,\,\, y(0)=0.5.
+\end{equation*}
+Utilizando el script en el enlance anterior se obtiene la siguiente tabla
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.38]{./table1.png} 
+\end{center} 
+\caption{Resultado para analizar el error del método de Euler}
+
+\end{figure}
+En la siguiente figura se puede gráficamente el comportamiento del error
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{./plot1.png} 
+\end{center} 
+\caption{Error del método de Euler}
+\label{plot}
+\end{figure}
+
+Se puede notar que el error crece lentamente conforme t incrementa. Este incremento controlado del error del método de Euler es una consecuencia de la estabilidad del método que implica que se espera que el error incremente de una manera no peor que de manera lineal como se ve en la grafica \ref{plot}.
+
 \section{Limites en el error para el Método de Euler}
 Aunque el método de Euler no sea suficientemente preciso en la práctica, es bastante elemental analizar el error producido de su aplicación. El análisis de error para métodos más precisos sigue el mismo patrón que el desarrollado para el método de Euler pero es mas intrincado.\\
 Para definir límites para el error del método de Euler se necesitan 2 lemas computacionales:
@@ -103,11 +128,11 @@ a_{i+1} \geq e^{(i+1)s}\bigg( a_0 +\frac{t}{s} \bigg)-\frac{t}{s}
 Para un entero específico(fijado) $i$, la desigualdad  \ref{ineq1}, implica que 
 \begin{equation}\label{eq::proof}
 \begin{split}
-a_{i+1} &\geq (1+s)a_i+t \\
-&\geq (1+s)[(1+s)a_{i-1}+t]+t=(1+s)^2 a_{i-1}+[1+(1+s)]t\\
-&\geq (1+s)^3 a_{i-2} +\big[ 1+(1+s)+(1+s)^2 \big]t\\
+a_{i+1} &\leq (1+s)a_i+t \\
+&\leq (1+s)[(1+s)a_{i-1}+t]+t=(1+s)^2 a_{i-1}+[1+(1+s)]t\\
+&\leq (1+s)^3 a_{i-2} +\big[ 1+(1+s)+(1+s)^2 \big]t\\
 &\vdots\\
-&\geq (1+s)^{i+1} a_0\big[ 1+(1+s)+(1+s)^2+\hdots+(1+s)^i\big]t
+&\leq (1+s)^{i+1} a_0\big[ 1+(1+s)+(1+s)^2+\hdots+(1+s)^i\big]t
 \end{split}
 \end{equation}
 pero
@@ -120,13 +145,33 @@ es una serie geométrica con razón $(1+s)$ que tiene como suma
 \end{equation*}
 Usando este resultado en \ref{eq::proof} se obtiene
 \begin{equation}
-a_{i+1}\geq (1+s)^{i+1} a_0 + \frac{(1+s)^{i+1}-1}{s} t =(1+s)^{i+1}\bigg(a_0+\frac{t}{s}\bigg)-\frac{t}{s},
+a_{i+1}\leq (1+s)^{i+1} a_0 + \frac{(1+s)^{i+1}-1}{s} t =(1+s)^{i+1}\bigg(a_0+\frac{t}{s}\bigg)-\frac{t}{s},
 \end{equation}
 utilizando el lema \ref{lema1} con $x=1+s$ se obtiene
 \begin{equation}
-a_i+1 \geq e^{(i+1)s}\bigg(a_0 + \frac{t}{s} \bigg) -\frac{t}{s}
+a_i+1 \leq e^{(i+1)s}\bigg(a_0 + \frac{t}{s} \bigg) -\frac{t}{s}
 \end{equation}
 \end{proof}
+
+\begin{theorem}
+Suponer que $f$ es continua y satisface la condición de Lipschitz ver \cite{Burden}, con constante $L$ en 
+\begin{equation*}
+D=\{(t,y)|a\leq t \leq b \,\,\, \text{y}\,\,\, -\infty<y<\infty \}
+\end{equation*}
+y que una constante M existe con la propiedad
+\begin{equation*}
+|y''(t)|\leq M, \,\,\,\,\, \forall \,\,\,\, t\in [a,b]
+\end{equation*}
+donde $y(t)$ es la solución única del problema de valor inicial
+\begin{equation*}
+y'=f(t,y), \,\,\,\,\, a \leq t \leq b, \,\,\,\,\,\, y(a)=\alpha.
+\end{equation*}
+Si $w_0,w_1, \hdots, w_N$ son las aproximaciones generadas por el método de Euler para un entero positivo $N$. Entonces se cumple la siguiente desigualdad para los errores del método, para todo $i=0,1,2,\hdots,N$
+\begin{equation}
+|y(t_i)-w_i|\leq \frac{hM}{2L}\big[ e^{L(t_i -a)}-1 \big]
+\end{equation}
+\end{theorem}
+La demostración del teorema anterior puede revisarse en \cite{Burden}.
 \end{lemma}
 
 
@@ -137,7 +182,6 @@ a_i+1 \geq e^{(i+1)s}\bigg(a_0 + \frac{t}{s} \bigg) -\frac{t}{s}
 %% cada entrada tiene su formatado dependiendo si es libro, artículo,
 %% tesis, contenido en la web, etc
 
-\bibitem{Bart} Bartle, R. G., \textit{The elements of real analysis}, (Second edition), John Wiley \& Sons, New York, 1976, 480 pp. QA300.B29 106,117
 
 \bibitem{Burden} Richard L. Burden, J. Douglas Faires \textit{Numerical Analysis}, (Ninth Edition). Brooks/Cole, Cengage Learning. 978-0-538-73351-9
 
