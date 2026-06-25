@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  24 JUN 2026 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  24 JUN 2026 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,7 +285,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count268
 \l__pdf_internal_box=\box47
 )
-No file Euler_method_error_EN.aux.
+(./Euler_method_error_EN.aux)
 \openout1 = `Euler_method_error_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -304,6 +304,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count269
@@ -343,6 +344,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
+
+(./Euler_method_error_EN.out) (./Euler_method_error_EN.out)
 \@outlinefile=\write3
 \openout3 = `Euler_method_error_EN.out'.
 
@@ -357,84 +360,38 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: Reference `prob1' on page 1 undefined on input line 59.
-
-
-LaTeX Warning: Reference `prob1' on page 1 undefined on input line 71.
-
-
-LaTeX Warning: Reference `euler_method1' on page 1 undefined on input line 77.
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `table' on page 2 undefined on input line 102.
-
-<../report/table1.png, id=26, 405.515pt x 354.32375pt>
+<../report/table1.png, id=40, 405.515pt x 354.32375pt>
 File: ../report/table1.png Graphic file (type png)
 <use ../report/table1.png>
 Package pdftex.def Info: ../report/table1.png  used on input line 106.
 (pdftex.def)             Requested size: 154.09729pt x 134.64441pt.
-
-LaTeX Warning: Reference `plot' on page 2 undefined on input line 111.
-
-<../report/plot1.png, id=28, 462.528pt x 346.896pt>
+<../report/plot1.png, id=43, 462.528pt x 346.896pt>
 File: ../report/plot1.png Graphic file (type png)
 <use ../report/plot1.png>
 Package pdftex.def Info: ../report/plot1.png  used on input line 115.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-[2 <../report/table1.png>]
-
-LaTeX Warning: Reference `ineq1' on page 3 undefined on input line 164.
-
-[3 <../report/plot1.png>]
-
-LaTeX Warning: Reference `eq:proof' on page 4 undefined on input line 184.
-
-
-LaTeX Warning: Reference `lemma1' on page 4 undefined on input line 190.
-
-
-LaTeX Warning: Reference `euler-error-theorem' on page 4 undefined on input lin
-e 224.
-
-
-LaTeX Warning: Citation `Burden' on page 4 undefined on input line 224.
-
+ [2 <../report/table1.png>] [3 <../report/plot1.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
-[4]
+ [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
  (./Euler_method_error_EN.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
-
-
-Package rerunfilecheck Warning: File `Euler_method_error_EN.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Euler_method_error_EN.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  AB56F8B63E1F8AA77A531E016AFFCDD3;196.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `Euler_method_error_EN.out' has not changed.
+(rerunfilecheck)             Checksum: AB56F8B63E1F8AA77A531E016AFFCDD3;196.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 236.
  ) 
 Here is how much of TeX's memory you used:
- 6994 strings out of 481239
- 102219 string characters out of 5920377
- 374206 words of memory out of 5000000
- 22112 multiletter control sequences out of 15000+600000
+ 7004 strings out of 481239
+ 102415 string characters out of 5920377
+ 374677 words of memory out of 5000000
+ 22116 multiletter control sequences out of 15000+600000
  541961 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,16n,29p,371b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,16n,29p,371b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -450,10 +407,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Euler_method_error_EN.pdf (4 pages, 227085 bytes).
+Output written on Euler_method_error_EN.pdf (4 pages, 227509 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
